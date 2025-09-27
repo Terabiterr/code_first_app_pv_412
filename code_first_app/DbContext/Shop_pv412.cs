@@ -38,5 +38,12 @@ namespace code_first_app
                 .WithMany(m => m.Subordinates)
                 .HasForeignKey(e => e.ManagerId);
         }
+        public DbSet<User> Users { get; set; }
+        public DbSet<UserProfile> UserProfiles { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderProduct> OrderProducts { get; set; }
+        public DbSet<Employee> Employees { get; set; }
     }
 }

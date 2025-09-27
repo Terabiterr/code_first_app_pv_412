@@ -35,7 +35,7 @@ namespace code_first_app.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Category");
+                    b.ToTable("Categories");
                 });
 
             modelBuilder.Entity("code_first_app.Models.Employee", b =>
@@ -59,7 +59,7 @@ namespace code_first_app.Migrations
 
                     b.HasIndex("ManagerId");
 
-                    b.ToTable("Employee");
+                    b.ToTable("Employees");
                 });
 
             modelBuilder.Entity("code_first_app.Models.Order", b =>
@@ -75,7 +75,7 @@ namespace code_first_app.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Order");
+                    b.ToTable("Orders");
                 });
 
             modelBuilder.Entity("code_first_app.Models.OrderProduct", b =>
@@ -93,7 +93,7 @@ namespace code_first_app.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("OrderProduct");
+                    b.ToTable("OrderProducts");
                 });
 
             modelBuilder.Entity("code_first_app.Models.Product", b =>
@@ -117,7 +117,7 @@ namespace code_first_app.Migrations
 
                     b.HasIndex("CategoryId");
 
-                    b.ToTable("Product");
+                    b.ToTable("Products");
                 });
 
             modelBuilder.Entity("code_first_app.Models.User", b =>
@@ -133,7 +133,7 @@ namespace code_first_app.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("User");
+                    b.ToTable("Users");
                 });
 
             modelBuilder.Entity("code_first_app.Models.UserProfile", b =>
@@ -158,7 +158,7 @@ namespace code_first_app.Migrations
                     b.HasIndex("UserId")
                         .IsUnique();
 
-                    b.ToTable("UserProfile");
+                    b.ToTable("UserProfiles");
                 });
 
             modelBuilder.Entity("code_first_app.Models.Employee", b =>
