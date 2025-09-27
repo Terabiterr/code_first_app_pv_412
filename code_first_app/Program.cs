@@ -6,6 +6,7 @@ namespace code_first_app
     {
         static void Main(string[] args)
         {
+            //В сервісі ServiceUser реалізувати методи
             using var serviceUser = new ServiceUser(new Shop_pv412());
 
                 var users = serviceUser.GetAllUsers();

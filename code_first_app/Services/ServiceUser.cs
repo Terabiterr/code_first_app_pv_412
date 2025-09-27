@@ -73,7 +73,12 @@ namespace code_first_app.Services
 
         public void DeleteUser(int id)
         {
-            throw new NotImplementedException();
+            var user = GetUserById(id);
+            if (user != null)
+            {
+                _db.Users.Remove(user);
+                _db.SaveChanges();
+            }
         }
 
         public void Dispose()
@@ -87,7 +92,13 @@ namespace code_first_app.Services
 
         public void UpdateUser(int id, User user)
         {
-            throw new NotImplementedException();
+            var userFromDb = GetUserById(id);
+            if (userFromDb != null)
+            {
+                userFromDb.UserName = user.UserName;
+                userFromDb.Profile = user.Profile;
+                _db.SaveChanges();
+            }
         }
     }
 }
