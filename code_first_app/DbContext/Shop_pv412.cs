@@ -32,13 +32,11 @@ namespace code_first_app
                 .HasOne(op => op.Product)
                 .WithMany(p => p.OrderProducts)
                 .HasForeignKey(op => op.ProductId);
-            //Створити міграцію бази даних
-            //Провести аналіз таблиць в MSSQL та зробити діаграму
-            //бази даних
-            //Скинути фото в тімс
-            //Enable-Migrations
-            //Add-Migration InitDatabase
-            //Update-Database
+            //Relation self to self
+            modelBuilder.Entity<Employee>()
+                .HasOne(e => e.Manager)
+                .WithMany(m => m.Subordinates)
+                .HasForeignKey(e => e.ManagerId);
         }
     }
 }
