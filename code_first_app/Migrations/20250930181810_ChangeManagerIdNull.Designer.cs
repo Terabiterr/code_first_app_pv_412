@@ -12,8 +12,8 @@ using code_first_app;
 namespace code_first_app.Migrations
 {
     [DbContext(typeof(Shop_pv412))]
-    [Migration("20250927174259_InitDatabase")]
-    partial class InitDatabase
+    [Migration("20250930181810_ChangeManagerIdNull")]
+    partial class ChangeManagerIdNull
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
